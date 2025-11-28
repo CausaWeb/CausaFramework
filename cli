@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Development-only CLI — completely safe on cheap shared hosting
+ */
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Dotenv\Dotenv;
+
+(Dotenv::createImmutable(__DIR__ . '/'))->load();
+
+require_once __DIR__ . '/src/app/Helpers/functions.php';
+
+$cliApp = new Application('My Mini Framework', '1.0');
+
+// register commands
+$cliApp->add(new \App\DevTools\Commands\MakeControllerCommand());
+$cliApp->add(new \App\DevTools\Commands\MakeViewCommand());
+$cliApp->add(new \App\DevTools\Commands\MakePageCommand());
+
+$cliApp->run();

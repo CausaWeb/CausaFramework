@@ -1,0 +1,27 @@
+{
+	"name": "causa/framework",
+	"description": "CausaFramework a mini-framework inspired by Laravel with Blade, FastRoute and .env Support for informative almost static websites for low resources hosting but very fast and efficient because it's powered by HTMX and AlpineJS.",
+	"author": "Oscar Alderete <oscaralderete@gmail.com>",
+	"type": "project",
+	"keywords": [
+		"gsap"
+	],
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"App\\": "src/app/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"App\\DevTools\\": "dev-tools/"
+		}
+	},
+	"require": {
+		"eftec/bladeone": "^4.19",
+		"nikic/fast-route": "^1.3",
+		"vlucas/phpdotenv": "^5.6",
+		"symfony/console": "^7.3",
+		"guzzlehttp/guzzle": "^7.10"
+	}
+}

@@ -1,0 +1,16 @@
+/node_modules
+/vendor
+/dist
+/.DS_Store
+/_docs
+/.vscode
+
+# Logs y sesiones
+storage/*.log
+storage/sessions/*
+
+# Cache real (solo el contenido)
+cache/*.bladec
+cache/api/*
+!cache/.gitkeep
+!cache/api/.gitkeep

@@ -1,0 +1,119 @@
+@import "tailwindcss";
+@import "htmx.css";
+
+:root {
+	--bg-color: #fff;
+}
+
+body,
+html {
+	min-height: 100%;
+	height: 100%;
+}
+
+code {
+	font-family: monospace !important;
+	font-weight: bold;
+}
+
+#body {
+	height: 100%;
+	background-color: var(--bg-color);
+	display: flex;
+	flex-direction: column;
+	padding: 0 2rem;
+	margin: 0 auto;
+
+	>main {
+		flex: 1;
+	}
+
+	>footer {
+		padding: 1rem 0;
+	}
+}
+
+.fjbic {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top-nav {
+	padding: 1rem 0;
+
+	img {
+		height: 3rem;
+		display: block;
+	}
+
+	nav {
+		gap: 1rem;
+
+		a {
+			display: block;
+		}
+	}
+}
+
+.indented {
+	margin-left: 1rem;
+}
+
+/* Small (sm: 640px) */
+@media only screen and (min-width: 640px) {}
+
+/* Medium (md: 768px) */
+@media only screen and (min-width: 768px) {}
+
+/* Large (lg: 1024px) */
+@media only screen and (min-width: 1024px) {}
+
+/* Extra Large (xl: 1280px) */
+@media only screen and (min-width: 1280px) {}
+
+/* 2XL (2xl: 1536px) */
+@media only screen and (min-width: 1536px) {}
+
+h1 {
+	@apply text-4xl mb-1;
+}
+
+h2 {
+	@apply text-2xl mt-4 mb-1;
+}
+
+.my-form {
+	@apply shadow-md rounded px-8 pt-6 pb-8 mb-4;
+
+	input,
+	textarea {
+		border: solid 1px #ccc;
+		display: block;
+		width: 100%;
+		margin-bottom: .5rem;
+		padding: .4rem .8rem;
+	}
+}
+
+.footer {
+	>section {
+		@apply grid grid-cols-1 sm:grid-cols-2 gap-6
+	}
+
+	.footer-img {
+		img {
+			height: 2.5rem;
+			width: auto;
+		}
+	}
+
+	.footer-logo {
+		filter: grayscale(100%) brightness(50%);
+	}
+
+	.footer-logo-dark {
+		filter: grayscale(100%) brightness(200%);
+	}
+
+}

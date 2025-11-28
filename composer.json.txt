@@ -1,0 +1,14 @@
+// only for low resources hostings
+
+"require": {
+  "php": "^8.2",
+  "jenssegers/blade": "^1.4",
+  "illuminate/view": "11.7.0",
+  "illuminate/events": "11.7.0",
+  "illuminate/filesystem": "11.7.0",
+  "illuminate/container": "11.7.0",
+  "illuminate/support": "11.7.0",
+  "illuminate/contracts": "11.7.0",
+  "illuminate/collections": "11.7.0",
+  "illuminate/macroable": "11.7.0"
+}

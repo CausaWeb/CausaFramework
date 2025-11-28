@@ -1,0 +1,20 @@
+{
+  "src/assets/css/app.css": {
+    "file": "styles-DAKtDV9p.css",
+    "src": "src/assets/css/app.css",
+    "isEntry": true,
+    "name": "styles",
+    "names": [
+      "styles.css"
+    ]
+  },
+  "src/assets/js/app.js": {
+    "file": "app-lLc5iCq1.js",
+    "name": "app",
+    "src": "src/assets/js/app.js",
+    "isEntry": true,
+    "css": [
+      "styles-DAKtDV9p.css"
+    ]
+  }
+}
