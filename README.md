@@ -84,6 +84,20 @@ npm run dev</code></pre>
 ---
 
 <section>
+	<h2>Video Tutorial</h2>
+	<p>Conoce los fundamentos de cómo funciona <b>Causa 
+	Framework</b> viendo este tutorial en YT:</p>
+
+
+[![Ver tutorial: primeros pasos con Causa Framework](https://img.youtube.com/vi/26i4hfdnT9I/0.jpg)](https://www.youtube.com/watch?v=26i4hfdnT9I)
+
+
+
+</section>
+
+---
+
+<section>
   <h1>🤝 Contribuir</h1>
   <p>Pull requests son bienvenidos. Si quieres proponer cambios grandes, abre primero un issue para discutirlo.</p>
 </section>

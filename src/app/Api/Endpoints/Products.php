@@ -6,7 +6,7 @@ use App\Api\Classes\BaseEndpoint;
 
 class Products extends BaseEndpoint
 {
-	protected static string $endpoint = '/api/products/';
+	protected static string $endpoint = '/products/';
 
 	public static function all(int $ttl = 600): ?array
 	{

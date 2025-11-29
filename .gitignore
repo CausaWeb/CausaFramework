@@ -11,6 +11,6 @@ storage/sessions/*
 
 # Cache real (solo el contenido)
 cache/*.bladec
-cache/api/*
+cache/api/*.json
 !cache/.gitkeep
 !cache/api/.gitkeep
