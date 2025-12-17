@@ -26,34 +26,23 @@ class BladeServiceProvider
 		$blade->directive('endnavlink', fn() => "</a>");
 
 		$blade->directive('vite', function ($expression = null) use ($vitePort) {
+			$output = '';
+
 			if ($expression) {
 				$vitePort = trim($expression, " '\"");
 			}
 
-			return <<<EOT
-<?php if (env('APP_ENV') === 'development'): ?>
-    <script type="module" src="http://localhost:{$vitePort}/@vite/client"></script>
-    <script type="module" src="http://localhost:{$vitePort}/src/assets/js/app.js"></script>
-    <link rel="stylesheet" href="http://localhost:{$vitePort}/src/assets/css/app.css">
-<?php else: ?>
-    <?php
-        // Manifest now lives in public/assets/.vite/manifest.json
-        \$manifestPath = public_path('assets/.vite/manifest.json');
-        \$manifest = file_exists(\$manifestPath)
-            ? json_decode(file_get_contents(\$manifestPath), true)
-            : [];
+			if (env('APP_ENV') === 'development') {
+				foreach (get_vite_libs($vitePort) as $item) {
+					$output .= $item;
+				}
+			} else {
+				foreach (get_manifest_libs() as $item) {
+					$output .= $item;
+				}
+			}
 
-        \$jsFile = \$manifest['src/assets/js/app.js']['file'] ?? null;
-        \$cssFile = \$manifest['src/assets/css/app.css']['file'] ?? null;
-    ?>
-    <?php if (\$jsFile): ?>
-        <script type="module" src="/assets/<?= \$jsFile ?>"></script>
-    <?php endif; ?>
-    <?php if (\$cssFile): ?>
-        <link rel="stylesheet" href="/assets/<?= \$cssFile ?>">
-    <?php endif; ?>
-<?php endif; ?>
-EOT;
+			return $output;
 		});
 
 

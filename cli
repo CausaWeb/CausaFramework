@@ -13,11 +13,14 @@ use Dotenv\Dotenv;
 
 require_once __DIR__ . '/src/app/Helpers/functions.php';
 
-$cliApp = new Application('My Mini Framework', '1.0');
+$cliApp = new Application('Causa Framework', '1.0');
 
 // register commands
 $cliApp->add(new \App\DevTools\Commands\MakeControllerCommand());
 $cliApp->add(new \App\DevTools\Commands\MakeViewCommand());
 $cliApp->add(new \App\DevTools\Commands\MakePageCommand());
+$cliApp->add(new \App\DevTools\Commands\ClearViewCacheCommand);
+$cliApp->add(new \App\DevTools\Commands\ClearApiCacheCommand);
+$cliApp->add(new \App\DevTools\Commands\ClearAllCacheCommand);
 
 $cliApp->run();
