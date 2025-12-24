@@ -22,7 +22,7 @@ $cliApp->add(new \App\DevTools\Commands\MakePageCommand());
 $cliApp->add(new \App\DevTools\Commands\ClearViewCacheCommand);
 $cliApp->add(new \App\DevTools\Commands\ClearApiCacheCommand);
 $cliApp->add(new \App\DevTools\Commands\ClearAllCacheCommand);
-$cliApp->add(new \App\DevTools\Commands\InitPestCommand);
-$cliApp->add(new \App\DevTools\Commands\TestPestCommand);
+$cliApp->add(new \App\DevTools\Commands\PestInitCommand);
+$cliApp->add(new \App\DevTools\Commands\PestInitCommand);
 
 $cliApp->run();

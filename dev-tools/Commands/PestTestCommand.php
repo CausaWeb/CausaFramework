@@ -7,20 +7,20 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class InitPestCommand extends Command
+class PestTestCommand extends Command
 {
 
-	protected static $defaultName = 'pest:init';
+	protected static $defaultName = 'pest:test';
 
 	protected function configure()
 	{
 		$this->setName(self::$defaultName)
-			->setDescription('Inits PEST');
+			->setDescription('Runs PEST tests');
 	}
 
 	protected function execute(InputInterface $input, OutputInterface $output): int
 	{
-		$run = shell_exec("./vendor/bin/pest --init");
+		$run = shell_exec("./vendor/bin/pest");
 
 		if ($run) {
 			$output->writeln($run);
