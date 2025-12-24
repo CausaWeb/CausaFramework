@@ -23,6 +23,6 @@ $cliApp->add(new \App\DevTools\Commands\ClearViewCacheCommand);
 $cliApp->add(new \App\DevTools\Commands\ClearApiCacheCommand);
 $cliApp->add(new \App\DevTools\Commands\ClearAllCacheCommand);
 $cliApp->add(new \App\DevTools\Commands\PestInitCommand);
-$cliApp->add(new \App\DevTools\Commands\PestInitCommand);
+$cliApp->add(new \App\DevTools\Commands\PestTestCommand);
 
 $cliApp->run();
